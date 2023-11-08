@@ -1,0 +1,142 @@
+
+.icon{
+ background-color: #181818;
+ border-radius: 5px ;
+ padding:4px;
+ width: 48px;
+ height:48px;
+ display:flex;
+ align-items: center;
+ justify-content:center;
+ cursor:pointer;
+ position:fixed;
+ top:10px;
+ left:10px;
+ z-index:999;
+ transition: transform .5s;
+}
+
+.icons{
+ transform: translateX(505px);
+ background-color:#181818;
+ border-radius: 5px ;
+ padding:4px;
+ width: 48px;
+ height:48px;
+ display:flex;
+ align-items: center;
+ justify-content:center;
+ cursor:pointer;
+ position:fixed;
+ top:10px;
+ left:10px;
+ z-index:999;
+}
+.icon:hover , .icons:hover{
+ background-color: #141414;
+}
+.svg{
+ color:#BCBCBC;
+ transition: transform .5s;
+}
+.svgs{
+ transform: rotate(-180deg);
+ color:#BCBCBC;
+}
+.svg:hover , .svgs:hover{
+ color: #fbfbfb;
+}
+
+
+.aside{
+ width: 30%;
+ background-color: #181818;
+ border-top-right-radius: 10px; 
+ border-bottom-right-radius: 10px; 
+ position: fixed;
+ transition: transform .5s;
+ left: -505px;
+ top: 10px;
+ bottom: 10px;
+ box-sizing: border-box;
+ overflow: hidden;
+ display:flex;
+ flex-direction:column;
+ row-gap: 5px;
+ z-index: 10;
+}
+
+
+.asides{
+ width: 30%;
+ background-color: #181818;
+ top:10px;
+ bottom: 10px;
+ border-top-right-radius: 5px; 
+ border-bottom-right-radius: 5px; 
+ transform: translateX(505px);
+ box-sizing: border-box;
+ overflow: hidden;
+ display:flex;
+ flex-direction:column;
+ row-gap: 5px;
+ z-index: 10;
+}
+
+.topAside{
+ margin: 5px;
+ display: flex;
+ align-items: center;
+ height: 15%;
+}
+
+.asideContains{
+ overflow: hidden;
+ overflow-y: scroll;
+ height: 100%;
+ 
+}
+.asideContains::-webkit-scrollbar {
+ width: 5px; 
+ background-color: transparent;
+}
+.asideContains::-webkit-scrollbar-thumb {
+ background-color: #fbfbfb; 
+ border-radius: 50px;
+}
+
+.content{
+ width: 92%;
+ font-family: helvetica;
+ color: #BCBCBC;
+ padding: 15px;
+ margin:5px;
+ border-radius: 3px;
+ cursor:pointer;
+ overflow: auto;
+ font-size:x-large;
+}
+.content:hover{
+ color: #fbfbfb;
+ background-color:#252525;
+}
+
+.content::-webkit-scrollbar {
+ width: 1px; 
+ background-color: transparent;
+ height: 1px;
+}
+.content::-webkit-scrollbar-thumb {
+ background-color: #595865; 
+ border-radius: 50px;
+}
+
+.border{
+ margin: 0 auto;
+ width: 90%;
+ border-bottom: 1px solid #31303b;
+ height: 5px;
+}
+.bottomAside{
+ height: 15%;
+}
