@@ -31,8 +31,6 @@ The project is organized into the following folders:
   - `zoom.css`: Styles for the zoom layout.
   - `zoom.js`: JavaScript for zoom functionality.
 
-## Screenshots
-
 ![UI Screenshot](screenshot.png)
 
 ## Usage
@@ -52,6 +50,4 @@ The project is organized into the following folders:
 
 Feel free to contribute to the project by submitting issues or pull requests.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
