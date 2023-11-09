@@ -1,0 +1,55 @@
+
+<button id="button"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="#fbfbfb"stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer-click"><path d="m9 9 5 12 1.8-5.2L21 14Z"/><path d="M7.2 2.2 8 5.1"/><path d="m5.1 8-2.9-.8"/><path d="M14 4.1 12 6"/><path d="m6 12-1.9 2"/></svg>
+</button>
+
+<dialog id="dialog">
+ This is a modal
+</dialog>
+
+
+<script>
+ const button = document.getElementById('button');
+ const dialog = document.getElementById('dialog');
+
+button.addEventListener('click', () => {
+ dialog.showModal();
+});
+dialog.addEventListener('click', () =>{
+ dialog.close();
+});
+</script>
+
+
+
+<style>
+ body{
+  display: flex;
+  flex-direction: column;
+ 
+ }
+ button{
+  border: none;
+  height: 100px;
+  width: 100px;
+  background-color: #181818;
+  border-radius: 15px;
+  opacity: .9;
+  margin: auto;
+  cursor: pointer;
+ }
+ button:hover{
+  opacity: 1;
+ }
+
+ dialog{
+  background-color: #fbfbfb;
+  color: #181818;
+  position: fixed;
+  border:none;
+  border-radius: 20px;
+  padding: 100px;
+  font-family: helvetica;
+  font-size: 30px;
+
+ }
+</style>

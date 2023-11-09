@@ -1,5 +1,5 @@
 <?php
-require_once "database-connection.php";
+require_once "database/database-connection.php";
 function getColor($c_id) 
 {
     global $pdo; 

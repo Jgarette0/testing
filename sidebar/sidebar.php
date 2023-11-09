@@ -9,13 +9,19 @@
   </div>
   <div class="border"></div>
   <div class="asideContains">
-   <div class="content">exampletext1234@gmail.com</div>
-   <div class="content">example</div>
-   <div class="content">example</div>
-   <div class="content">example</div>
-   <div class="content">example</div>
-   <div class="content">example</div>
-   <div class="content">example</div>
+
+  <div class="teacherDetail">
+   <div class="teacherName">Jilian Garette Abangan</div>
+   <div class="teacherInfo" id="one">Computer Laboratory</div>
+   </div>
+
+
+   <div class="teacherDetail">
+   <div class="teacherName"></div>
+   <div class="teacherInfo"></div>
+   </div>
+   
+
   </div>
   <div class="border"></div>
   <div class="bottomAside"></div>

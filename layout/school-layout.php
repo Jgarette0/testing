@@ -1,5 +1,5 @@
 
-<?php include 'classroom-status.php';?>
+<?php include 'functions/classroom-status.php';?>
   <div class="top-view">
     <div class="layout-container"> 
       <div class="layout">
@@ -85,13 +85,13 @@
   </div>
 
   <script>
-    // JavaScript to change the content based on button clicks
+
     const topView = document.querySelector(".top-view");
     const btn2ndFloor = document.getElementById("btn2ndFloor");
     const btn3rdFloor = document.getElementById("btn3rdFloor");
     const btn1stFloor = document.getElementById("btn1stFloor");
 
-    // Simulate a click on the 2nd Floor button to set it as the default
+
     btn2ndFloor.click();
 
     btn2ndFloor.addEventListener("click", () => {
@@ -312,9 +312,4 @@
       `;
     });
   </script>
-  <style>
-    body{
-      
-  overflow-y: hidden;
-}
-  </style>
+

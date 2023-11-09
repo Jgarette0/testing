@@ -17,7 +17,7 @@
 }
 
 .icons{
- transform: translateX(505px);
+ transform: translateX(405px);
  background-color:#181818;
  border-radius: 5px ;
  padding:4px;
@@ -105,31 +105,56 @@
  border-radius: 50px;
 }
 
-.content{
- width: 92%;
+.teacherDetail{
+ margin:10px;
+}
+
+.teacherName{
+ width: 100%;
  font-family: helvetica;
  color: #BCBCBC;
- padding: 15px;
- margin:5px;
+ height: 50px;
  border-radius: 3px;
  cursor:pointer;
  overflow: auto;
  font-size:x-large;
+ display: flex;
+ align-items: center;
 }
-.content:hover{
+.teacherName:hover{
  color: #fbfbfb;
  background-color:#252525;
 }
 
-.content::-webkit-scrollbar {
+.teacherInfo{
+ width: 100%;
+ font-family: helvetica;
+ color: #BCBCBC;
+ height: 50px;
+ border-radius: 3px;
+ cursor:pointer;
+ overflow: auto;
+ font-size:x-large;
+ display: flex;
+ align-items: center;
+}
+.teacherInfo:hover{
+ color: #fbfbfb;
+ background-color:#252525;
+}
+#one{
+ display: none;
+}
+.teacherName::-webkit-scrollbar {
  width: 1px; 
  background-color: transparent;
  height: 1px;
 }
-.content::-webkit-scrollbar-thumb {
+.teacherName::-webkit-scrollbar-thumb {
  background-color: #595865; 
  border-radius: 50px;
 }
+
 
 .border{
  margin: 0 auto;
@@ -139,4 +164,7 @@
 }
 .bottomAside{
  height: 15%;
+}
+div{
+ border:1px solid lime;
 }
