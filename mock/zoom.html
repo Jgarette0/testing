@@ -8,29 +8,30 @@
 </head>
 <body>
 
-<div class="zoomArea">
+<div class="top-view">
   Hello
 </div>
 
-<div class="container">
-  <button class="plus">+</button><span class="here">50%</span>
-  <button class="minus" >-</button>
+<div class="zoom-container">
+  <div class="minus" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus"><path d="M5 12h14"/></svg></div>
+  <div class="percent">50%</div>
+  <div class="plus"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg></div>
 </div>
 
 <script>
  //this code from chatGPT so i don't understand most of the code
 
  //gets the element through selector classes
-  const zoomArea = document.querySelector('.zoomArea');
+  const topView = document.querySelector('.top-view');
   const plus = document.querySelector('.plus');
   const minus = document.querySelector('.minus');
-  const here = document.querySelector('.here');
+  const percent = document.querySelector('.percent');
 
   //function that can be used for adding value
   function changeScale(amount) {
 
    //TF is this
-    const currentScale = parseFloat(getComputedStyle(zoomArea).transform.split(',')[3]);
+    const currentScale = parseFloat(getComputedStyle(topView).transform.split(',')[3]);
     const newScale = currentScale + amount;
 
     // Limit scale to 0.5 to 1 ??
@@ -38,10 +39,10 @@
 
     // Display percentage in console or can be in page
     const percentage = ((limitedScale - 0.5) / 0.5) * 100;
-    here.innerHTML = `${percentage.toFixed(0)}%`;
+    percent.innerHTML = `${percentage.toFixed(0)}%`;
 
     // Apply the new scale
-    zoomArea.style.transform = `scale(${limitedScale})`;
+    topView.style.transform = `scale(${limitedScale})`;
   }
 
   //if button is click do the function above and input a corresponding value
@@ -57,26 +58,46 @@
 
 </script>
 <style>
- .zoomArea {
-   padding: 100px;
-   background-color:#181818;
-   color: #fbfbfb;
-   width: 50px;
-   height: 50px;
-   margin: auto;
-   transform: scale(0.75);
-   transition: transform 0.3s ease;
-   border-radius: 10px;
- }
 
+  .zoom-container{
+    display: flex;
+    background-color: #232329;
+    width: 132px;
+    height: 40px;
+    color: #fbfbfb;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: .5rem;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+ .top-view {
+   transform: scale(0.75);;
+ }
+ .percent{
+  width: 60px;
+ }
  .plus, .minus {
-   padding: 10px;
-   background-color: #181818;
+  background-color: #232329;
    color: #fbfbfb;
    width: 40px;
    height: 40px;
-   margin: 10px;
    cursor: pointer;
+   box-sizing: border-box;
+   padding: 10.6px;
+ }
+ .plus{
+  border-bottom-right-radius: .5rem;
+  border-top-right-radius: .5rem;
+ }
+ .minus{
+  border-bottom-left-radius: .5rem;
+  border-top-left-radius: .5rem;
+ }
+ .plus:hover,.minus:hover{
+  background-color: #2f2f38;
  }
 </style>
 

@@ -120,6 +120,7 @@
  font-size:x-large;
  display: flex;
  align-items: center;
+ padding-left: 30px;
 }
 .teacherName:hover{
  color: #fbfbfb;
@@ -164,7 +165,4 @@
 }
 .bottomAside{
  height: 15%;
-}
-div{
- border:1px solid lime;
 }
