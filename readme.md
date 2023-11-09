@@ -1,9 +1,5 @@
 # School Classroom Management System
 
-## Overview
-
-This project is a School Classroom Management System that allows teachers to log in, select a classroom, and view its status. The system also includes a blueprint layout of the school with zoom functionality for better visualization.
-
 ## Project Structure
 
 The project is organized into the following folders:
