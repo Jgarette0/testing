@@ -1,4 +1,4 @@
-# School Classroom Management System
+# [School Classroom Management System](https://github.com/Jgarette0/appsDev)
 
 ## Project Structure
 
@@ -13,8 +13,6 @@ The project is organized into the following folders:
 - **layout**
   - `school-layout.php`: Displays the school layout like a blueprint.
   - `school-layout.css`: Styles for the school layout.
-
-
   - `zoom.php`: Displays the school layout with zoom functionality.
   - `zoom.css`: Styles for the zoom layout.
   - `zoom.js`: JavaScript for zoom functionality.
@@ -24,16 +22,10 @@ The project is organized into the following folders:
   - `sidebar.css`: Styles for the sidebar.
   - `sidebar.js`: JavaScript for sidebar functionality.
 
-
-<<<<<<< HEAD
 - **mock**
   - Contains practice and mock micro-interactions and systems for development.
 
-
 ![UI Screenshot](images/screenshot.png)
-=======
-![UI Screenshot](screenshot.png)
->>>>>>> 5c7c7f357eb3de47070622333c49ca7bc3275bf5
 
 ## Usage
 
@@ -50,9 +42,18 @@ The project is organized into the following folders:
 
 ## Contributing
 
-Feel free to contribute to the project by submitting issues or pull requests.
-<<<<<<< HEAD
-=======
+Thank you for considering contributing to our project! To get started:
 
+```bash
+# Clone the repository to your local machine
+git clone https://github.com/Jgarette0/appsDev.git
 
->>>>>>> 5c7c7f357eb3de47070622333c49ca7bc3275bf5
+# Create a new branch for your contributions
+git checkout -b your-branch-name
+
+# Make your changes and commit them
+git add .
+git commit -m "Your descriptive commit message"
+
+# Push your changes to the repository
+git push origin your-branch-name
