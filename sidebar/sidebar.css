@@ -120,8 +120,9 @@
  font-size:x-large;
  display: flex;
  align-items: center;
- padding-left: 30px;
+ padding-left: 10px;
  font-size: 1.75em;
+ display:flex;
 }
 .teacherName:hover{
  color: #fbfbfb;
@@ -129,7 +130,7 @@
 }
 
 .teacherInfo{
- width: 100%;
+ width: 99%;
  font-family: helvetica;
  color: #BCBCBC;
  height: 50px;
@@ -140,9 +141,11 @@
  display: flex;
  align-items: center;
  padding: .4em;
- padding-left: 12.5%;
+ padding-left: 11%;
  box-sizing: border-box;
  font-size: 1.50em;
+ display:flex;
+ white-space: nowrap;
 }
 .teacherInfo:hover{
  color: #fbfbfb;
@@ -169,5 +172,21 @@
  height: 15%;
 }
 #one{
- display: block;
+ display: none;
+}
+.nameSvg,.classroomSvg{
+ padding: 8px;
+ color:#BCBCBC;
+}
+.nameSvg{
+ transform: rotate(90deg);
+}
+.classroomSvg{
+ min-width: 24px;
+ min-height: 24px;
+}
+.class-timer{
+ text-align: right;
+ width: 100%;
+ color: #c92a2a;
 }
