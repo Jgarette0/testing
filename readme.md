@@ -42,7 +42,8 @@ The project is organized into the following folders:
 
 ## Contributing
 
-Thank you for considering contributing to our project! To get started:
+Feel free to contribute to the project by submitting issues or pull requests. 
+To get started:
 
 ```bash
 # Clone the repository to your local machine
