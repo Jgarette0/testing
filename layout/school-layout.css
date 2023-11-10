@@ -8,6 +8,9 @@ body {
   background-color:var( --night-background-color) !important;
   margin: 0;
   color: var(--day-text-color);
+  font-size: 1rem;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
   }
   .top-view{
     transform: scale(0.75);
@@ -42,22 +45,26 @@ body {
     color: var(--day-text-color);
     justify-content: center;
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    font-size: 1em;
+    right: 10px;
+    bottom: 10px;
+    font-size: 1rem;
     border-radius: .5em;
+    font-family: 'Assistant', sans-serif;
+    
   }
   
   .value {
     background-color: transparent;
     border: none;
-    padding: 19px;
+    padding: 10px;
     display: flex;
     position: relative;
     color: #fbfbfb;
     gap: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
   }
   
   .value:not(:active):hover,
@@ -105,7 +112,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:100px;
+    margin-top:50px;
     }
     .layout{
       height: 70vh;

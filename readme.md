@@ -25,15 +25,11 @@ The project is organized into the following folders:
   - `sidebar.js`: JavaScript for sidebar functionality.
 
 
-<<<<<<< HEAD
 - **mock**
   - Contains practice and mock micro-interactions and systems for development.
 
 
 ![UI Screenshot](images/screenshot.png)
-=======
-![UI Screenshot](screenshot.png)
->>>>>>> 5c7c7f357eb3de47070622333c49ca7bc3275bf5
 
 ## Usage
 
@@ -51,8 +47,6 @@ The project is organized into the following folders:
 ## Contributing
 
 Feel free to contribute to the project by submitting issues or pull requests.
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 5c7c7f357eb3de47070622333c49ca7bc3275bf5
+

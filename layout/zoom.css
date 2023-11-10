@@ -1,30 +1,30 @@
 .zoom-container{
  display: flex;
  background-color: #181818;
- width: 182px;
- height: 56px;
+ width: 132px;
+ height: 36px;
  color: #fbfbfb;
  align-items: center;
  justify-content: center;
  text-align: center;
  border-radius: .5rem;
  position: fixed;
- bottom: 20px;
- left: 20px;
+ bottom: 10px;
+ left: 10px;
 }
 
 .percent{
-width: 70px;
-font-size: 1.5em;
+width: 60px;
+font-size: 1rem;
 }
 .plus, .minus {
 background-color: #181818;
 color: #fbfbfb;
-width: 56px;
-height: 56px;
+width: 36px;
+height: 36px;
 cursor: pointer;
 box-sizing: border-box;
-padding: 15px;
+padding: 10px;
 }
 .plus{
 border-bottom-right-radius: .5rem;
