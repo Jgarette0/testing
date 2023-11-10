@@ -42,19 +42,37 @@ The project is organized into the following folders:
 
 ## Contributing
 
-Feel free to contribute to the project by submitting issues or pull requests. 
-To get started:
+Thank you for considering contributing to our project! To get started, follow these steps:
 
-```bash
-# Clone the repository to your local machine
-git clone https://github.com/Jgarette0/appsDev.git
+1. **Fork the repository:** [Fork](https://github.com/Jgarette0/appsDev/fork) the repository to your GitHub account.
 
-# Create a new branch for your contributions
-git checkout -b your-branch-name
+2. **Clone your fork:** Clone the repository from your account to your local machine.
 
-# Make your changes and commit them
-git add .
-git commit -m "Your descriptive commit message"
+    ```bash
+    git clone https://github.com/YourGitHubUsername/appsDev.git
+    ```
 
-# Push your changes to the repository
-git push origin your-branch-name
+3. **Create a new branch:** Create a new branch for your contributions.
+
+    ```bash
+    git checkout -b your-branch-name
+    ```
+
+4. **Make your changes:** Make the necessary changes, add new features, or fix bugs.
+
+5. **Commit your changes:** Commit your changes with a descriptive commit message.
+
+    ```bash
+    git add .
+    git commit -m "Your descriptive commit message"
+    ```
+
+6. **Push your changes:** Push your changes to your fork on GitHub.
+
+    ```bash
+    git push origin your-branch-name
+    ```
+
+7. **Open a pull request:** Open a pull request on [GitHub](https://github.com/Jgarette0/appsDev/pulls) to propose your changes for review and inclusion in the main project.
+
+Feel free to explore the code, fix bugs, add new features, or improve documentation. Your contributions are highly valued!
