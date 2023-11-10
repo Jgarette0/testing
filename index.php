@@ -12,7 +12,7 @@
  <?php include 'sidebar/sidebar.php';?>
  <?php include 'layout/school-layout.php';?>
  <?php include 'layout/zoom.php';?>
- <?php include 'mock/help.php';?>
+ <?php include 'mock/help-detail.php';?>
  
  <script src="sidebar/sidebar.js"></script>
  <script src="layout/zoom.js"></script>
