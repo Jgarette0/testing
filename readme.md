@@ -1,9 +1,5 @@
 # School Classroom Management System
 
-## Overview
-
-This project is a School Classroom Management System that allows teachers to log in, select a classroom, and view its status. The system also includes a blueprint layout of the school with zoom functionality for better visualization.
-
 ## Project Structure
 
 The project is organized into the following folders:
@@ -18,22 +14,22 @@ The project is organized into the following folders:
   - `school-layout.php`: Displays the school layout like a blueprint.
   - `school-layout.css`: Styles for the school layout.
 
-- **mock**
-  - Contains practice and mock micro-interactions and systems for development.
+
+  - `zoom.php`: Displays the school layout with zoom functionality.
+  - `zoom.css`: Styles for the zoom layout.
+  - `zoom.js`: JavaScript for zoom functionality.
 
 - **sidebar**
   - `sidebar.php`: Displays a sidebar with the names of teachers.
   - `sidebar.css`: Styles for the sidebar.
   - `sidebar.js`: JavaScript for sidebar functionality.
 
-- **zoom**
-  - `zoom.php`: Displays the school layout with zoom functionality.
-  - `zoom.css`: Styles for the zoom layout.
-  - `zoom.js`: JavaScript for zoom functionality.
 
-## Screenshots
+- **mock**
+  - Contains practice and mock micro-interactions and systems for development.
 
-![UI Screenshot](screenshot.png)
+
+![UI Screenshot](images/screenshot.png)
 
 ## Usage
 
@@ -51,7 +47,3 @@ The project is organized into the following folders:
 ## Contributing
 
 Feel free to contribute to the project by submitting issues or pull requests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).

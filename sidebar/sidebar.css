@@ -17,7 +17,7 @@
 }
 
 .icons{
- transform: translateX(405px);
+ transform: translateX(505px);
  background-color:#181818;
  border-radius: 5px ;
  padding:4px;
@@ -110,10 +110,10 @@
 }
 
 .teacherName{
- width: 100%;
+ width: 93%;
  font-family: helvetica;
  color: #BCBCBC;
- height: 50px;
+ height: 65px;
  border-radius: 3px;
  cursor:pointer;
  overflow: auto;
@@ -121,6 +121,7 @@
  display: flex;
  align-items: center;
  padding-left: 30px;
+ font-size: 1.75em;
 }
 .teacherName:hover{
  color: #fbfbfb;
@@ -138,14 +139,16 @@
  font-size:x-large;
  display: flex;
  align-items: center;
+ padding: .4em;
+ padding-left: 12.5%;
+ box-sizing: border-box;
+ font-size: 1.50em;
 }
 .teacherInfo:hover{
  color: #fbfbfb;
  background-color:#252525;
 }
-#one{
- display: none;
-}
+
 .teacherName::-webkit-scrollbar {
  width: 1px; 
  background-color: transparent;
@@ -156,7 +159,6 @@
  border-radius: 50px;
 }
 
-
 .border{
  margin: 0 auto;
  width: 90%;
@@ -165,4 +167,7 @@
 }
 .bottomAside{
  height: 15%;
+}
+#one{
+ display: block;
 }

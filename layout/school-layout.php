@@ -1,5 +1,5 @@
 
-<?php include 'functions/classroom-status.php';?>
+<?php include 'functions/get-color-classroom.php';?>
   <div class="top-view">
     <div class="layout-container"> 
       <div class="layout">
