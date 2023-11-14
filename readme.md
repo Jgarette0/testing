@@ -22,10 +22,7 @@ The project is organized into the following folders:
   - `sidebar.css`: Styles for the sidebar.
   - `sidebar.js`: JavaScript for sidebar functionality.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d0a7371f279cac4a9243ad1ab491af549f6b2457
 - **mock**
   - Contains practice and mock micro-interactions and systems for development.
 
@@ -46,17 +43,13 @@ The project is organized into the following folders:
 
 ## Contributing
 
-<<<<<<< HEAD
-Feel free to contribute to the project by submitting issues or pull requests.
-=======
-Thank you for considering contributing to our project! To get started, follow these steps:
->>>>>>> d0a7371f279cac4a9243ad1ab491af549f6b2457
+
+Consider contributing our project, To get started, follow these steps:
+
 
 1. **Fork the repository:** [Fork](https://github.com/Jgarette0/appsDev/fork) the repository to your GitHub account.
 
-<<<<<<< HEAD
 
-=======
 2. **Clone your fork:** Clone the repository from your account to your local machine.
 
     ```bash
@@ -87,4 +80,4 @@ Thank you for considering contributing to our project! To get started, follow th
 7. **Open a pull request:** Open a pull request on [GitHub](https://github.com/Jgarette0/appsDev/pulls) to propose your changes for review and inclusion in the main project.
 
 Feel free to explore the code, fix bugs, add new features, or improve documentation. Your contributions are highly valued!
->>>>>>> d0a7371f279cac4a9243ad1ab491af549f6b2457
+
