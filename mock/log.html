@@ -35,9 +35,12 @@
         <path d="m6 6 12 12" />
       </svg>
     </div>
-    <div class="question">Tap your Id</div>
-    <div class="paragraph"><p>Select time</p></div>
-    <div class="dropdown">
+    <div class="question">Do you want to use this classroom?</div>
+    <div class="buttons">
+      <button class="yes">yes</button><button class="no">no</button>
+    </div>
+    <div class="paragraph" style="display: none"><p>Tap your id</p></div>
+    <div class="dropdown" style="display: none">
       <select name="" id="">
         <option value="60:00">60:00</option>
         <option value="1:30:00">1:30:00</option>
@@ -51,8 +54,11 @@
   const button = document.getElementById("button");
   const dialog = document.getElementById("dialog");
   const closing = document.querySelector(".close");
-  const parag = document.querySelector('.paragraph');
-  const drop = document.querySelector('.dropdown');
+  const noway = document.querySelector(".no");
+  const yes = document.querySelector(".yes");
+  const question = document.querySelector(".question");
+  const parag = document.querySelector(".paragraph");
+  const drop = document.querySelector(".dropdown");
 
   button.addEventListener("click", () => {
     dialog.showModal();
@@ -63,7 +69,13 @@
   noway.addEventListener("click", () => {
     dialog.close();
   });
-  
+  yes.addEventListener("click", () => {
+    noway.classList.toggle("nos");
+    yes.classList.toggle("yess");
+    question.classList.toggle("questions");
+    parag.style.display = "flex";
+    drop.style.display = "flex";
+  });
 </script>
 
 <style>
@@ -97,6 +109,7 @@
     font-family: helvetica;
     font-size: 30px;
     height: 350px;
+    width: 400px;
   }
 
   .container {
@@ -145,14 +158,14 @@
     border: 1px solid #181818;
     background-color: #fbfbfb;
     border-radius: 15px;
+    font-size: 1.5rem;
   }
   .buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .buttons button {
-  }
+
   .yes,
   .no {
     width: 150px;
@@ -160,5 +173,10 @@
     text-align: center;
     color: #fbfbfb;
     font-size: 1.25rem;
+  }
+  .nos,
+  .yess,
+  .questions {
+    display: none;
   }
 </style>
