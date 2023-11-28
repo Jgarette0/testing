@@ -1,4 +1,4 @@
-const classroom = document.querySelector(".green");
+const classrooms = document.querySelectorAll(".green");
 const dialog = document.getElementById("dialog");
 const timerDialog = document.getElementById("timer-dialog");
 const close = document.querySelector(".close-button");
@@ -8,9 +8,12 @@ const form = document.querySelector(".form");
 const submittedSvg = document.querySelector(".submits-svg");
 const closedSvg = document.querySelector(".close-svg");
 
-classroom.addEventListener("click", () => {
-  dialog.showModal();
+classrooms.forEach((classroom) => {
+  classroom.addEventListener("click", () => {
+    dialog.showModal();
+  });
 });
+
 close.addEventListener("click", () => {
   dialog.close();
 });
@@ -37,6 +40,7 @@ form.addEventListener("submit", function (event) {
   inputField.value = "";
   submits.disabled = true;
 });
+
 submittedSvg.addEventListener("click", () => {
   submittedSvg.classList.toggle("submitted-svg");
   closedSvg.classList.toggle("closed-svg");
