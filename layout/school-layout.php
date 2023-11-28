@@ -15,23 +15,26 @@
     </div>
     <div class="row2">
      <div class="main-col1">
-      <div class="main-classrooms1">
+      <div class="main-classrooms1" style="border:none">
        <div class="main-classroom">
+        <button <?php echo getColor(0);?> disabled>Faculty Room</button>
        </div>
        <div class="main-classroom">
+        <button <?php echo getColor(0);?> disabled>Principals Office</button>
        </div>
        <div class="main-classroom">
+        <button <?php echo getColor(0);?> disabled>Accounting Office</button>
        </div>
       </div>
       <div class="main-classrooms2">
        <div class="main-classroom">
-        <button <?php echo getColor(1);?>>Room 4</button>
+        <button <?php echo getColor(3);?>>IT Department</button>
        </div>
        <div class="main-classroom">
-        <button <?php echo getColor(2);?>>Room 5</button>
+        <button <?php echo getColor(2);?>>BSIT I</button>
        </div>
        <div class="main-classroom">
-        <button <?php echo getColor(1);?>>Room 6</button>
+        <button <?php echo getColor(1);?>>BSEntrep I</button>
        </div>
       </div>
      </div>
@@ -52,13 +55,13 @@
     <div class="rowb1">
      <div class="side-classrooms">
       <div class="side-classroom">
-       <button <?php echo getColor(3);?>>Room 7</button>
+       <button <?php echo getColor(4);?>>BPED I</button>
       </div>
       <div class="side-classroom">
-       <button <?php echo getColor(1);?>>Room 8</button>
+       <button <?php echo getColor(5);?>>BEED I</button>
       </div>
       <div class="side-classroom">
-       <button <?php echo getColor(2);?>>Room 9</button>
+       <button <?php echo getColor(6);?>>BSED I</button>
       </div>
      </div>
      <div class="side-alley">
@@ -96,7 +99,7 @@ btn2ndFloor.addEventListener("click", () => {
         <div class="col1">
           <div class="row1">
             <div class="stairs-classroom">
-            <button <?php echo getColor(10);?>>Room 10</button>
+            <button <?php echo getColor(13);?>>Music Department</button>
             </div>
             <div class="stairs-side">
               <div class="stairs-step1">
@@ -109,23 +112,24 @@ btn2ndFloor.addEventListener("click", () => {
             <div class="main-col1">
               <div class="main-classrooms1">
                 <div class="main-classroom">
-                  <button <?php echo getColor(11);?>>Room 11</button>
+                  <button <?php echo getColor(12);?>>SHS I</button>
                 </div>
                 <div class="main-classroom">
-                  <button <?php echo getColor(12);?>>Room 12</button>
+                  <button <?php echo getColor(11);?>>SHS II</button>
                 </div>
                 <div class="main-classroom">
+                <button <?php echo getColor(0);?> disabled>Registrar's Office</button>
                 </div>
               </div>
               <div class="main-classrooms2">
                 <div class="main-classroom">
-                  <button <?php echo getColor(14);?>>Room 14</button>
+                  <button <?php echo getColor(10);?>>STEM II</button>
                 </div>
                 <div class="main-classroom">
-                  <button <?php echo getColor(15);?>>Room 15</button>
+                  <button <?php echo getColor(9);?>>HUMMS II</button>
                 </div>
                 <div class="main-classroom">
-                  <button <?php echo getColor(16);?>>Room 16</button>
+                  <button <?php echo getColor(8);?>>ABM II</button>
                 </div>
               </div>
             </div>
@@ -133,7 +137,7 @@ btn2ndFloor.addEventListener("click", () => {
           </div>
           <div class="row3">
             <div class="stairs-classroom2">
-              <button <?php echo getColor(17);?>>Room 17</button>
+              <button <?php echo getColor(7);?>>Computer Lab I</button>
             </div>
             <div class="stairs-side2">
               <div class="stairs-step1a">
@@ -147,13 +151,13 @@ btn2ndFloor.addEventListener("click", () => {
           <div class="rowb1">
             <div class="side-classrooms">
               <div class="side-classroom">
-                <button <?php echo getColor(18);?>>Room 18</button>
+                <button <?php echo getColor(14);?>>STEM I</button>
               </div>
               <div class="side-classroom">
-                <button <?php echo getColor(19);?>>Room 19</button>
+                <button <?php echo getColor(15);?>>HUMMS I</button>
               </div>
               <div class="side-classroom">
-                <button <?php echo getColor(20);?>>Room 20</button>
+                <button <?php echo getColor(16);?>>ABM I</button>
               </div>
             </div>
             <div class="side-alley">
@@ -173,7 +177,7 @@ btn3rdFloor.addEventListener("click", () => {
       <div class="col1">
         <div class="row1">
           <div class="stairs-classroom">
-            <button <?php echo getColor(21);?>>Room 21</button>
+            <button <?php echo getColor(23);?>>BSEntrep</button>
           </div>
           <div class="stairs-side">
             <div class="stairs-step1">
@@ -186,23 +190,23 @@ btn3rdFloor.addEventListener("click", () => {
           <div class="main-col1">
             <div class="main-classrooms1">
               <div class="main-classroom">
-                <button <?php echo getColor(22);?>>Room 22</button>
+                <button <?php echo getColor(22);?>>BEED</button>
               </div>
               <div class="main-classroom">
-                <button <?php echo getColor(23);?>>Room 23</button>
+                <button <?php echo getColor(21);?>>BPED</button>
               </div>
               <div class="main-classroom">
-                <button <?php echo getColor(24);?>>Room 24</button>
+                <button <?php echo getColor(20);?>>BSED</button>
               </div>
             </div>
             <div class="main-classrooms2">
               <div class="main-classroom">
-              <button <?php echo getColor(3);?>>TVL Room</button>
+              <button <?php echo getColor(19);?>>TVL Room</button>
               </div>
               <div class="main-classroom">
               </div>
               <div class="main-classroom">
-                <button <?php echo getColor(2);?>>Computer Laboratory</button>
+                <button <?php echo getColor(18);?>>Computer Laboratory</button>
               </div>
             </div>
           </div>
@@ -210,7 +214,7 @@ btn3rdFloor.addEventListener("click", () => {
         </div>
         <div class="row3">
           <div class="stairs-classroom2">
-            <button <?php echo getColor(1);?>>Lecture Room</button>
+            <button <?php echo getColor(17);?>>Lecture Room</button>
           </div>
           <div class="stairs-side2">
             <div class="stairs-step1a">
@@ -247,23 +251,26 @@ btn1stFloor.addEventListener("click", () => {
           </div>
           <div class="row2">
             <div class="main-col1">
-              <div class="main-classrooms1">
+              <div class="main-classrooms1" style="border:none">
                 <div class="main-classroom">
+                <button <?php echo getColor(0);?> disabled>Faculty Room</button>
                 </div>
                 <div class="main-classroom">
+                <button <?php echo getColor(0);?> disabled>Principal's Office</button>
                 </div>
                 <div class="main-classroom">
+                <button <?php echo getColor(0);?> disabled>Accounting Office</button>
                 </div>
               </div>
               <div class="main-classrooms2">
                 <div class="main-classroom">
-                  <button <?php echo getColor(4);?>>Room 4</button>
+                  <button <?php echo getColor(4);?>>IT Department</button>
                 </div>
                 <div class="main-classroom">
-                  <button <?php echo getColor(5);?>>Room 5</button>
+                  <button <?php echo getColor(5);?>>BSIT I</button>
                 </div>
                 <div class="main-classroom">
-                  <button <?php echo getColor(6);?>>Room 6</button>
+                  <button <?php echo getColor(6);?>>BSEntrep I</button>
                 </div>
               </div>
             </div>
@@ -284,13 +291,13 @@ btn1stFloor.addEventListener("click", () => {
           <div class="rowb1">
             <div class="side-classrooms">
               <div class="side-classroom">
-                <button <?php echo getColor(7);?>>Room 7</button>
+                <button <?php echo getColor(7);?>>BPED I</button>
               </div>
               <div class="side-classroom">
-                <button <?php echo getColor(8);?>>Room 8</button>
+                <button <?php echo getColor(8);?>>BEED I</button>
               </div>
               <div class="side-classroom">
-                <button <?php echo getColor(9);?>>Room 9</button>
+                <button <?php echo getColor(9);?>>BSED I</button>
               </div>
             </div>
             <div class="side-alley">

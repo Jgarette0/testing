@@ -1,7 +1,7 @@
 <?php 
 
 $host = 'localhost';
-$dbname = 'cctc';
+$dbname = 'appsdev';
 $dbusername = 'root';
 $dbpassword = 'jilian';
 

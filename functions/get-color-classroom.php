@@ -1,18 +1,19 @@
 <?php
 require_once "database/database-connection.php";
-function getColor($c_id) 
-{
+
+function getColor($classroom_id) {
     global $pdo; 
-    $query = "SELECT status FROM classroom WHERE c_id = :c_id";
+    $query = "SELECT classroom_status FROM classrooms WHERE classroom_id = :classroom_id";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(':c_id', $c_id);
+    $stmt->bindParam(':classroom_id', $classroom_id);
     $stmt->execute();
-    $status = $stmt->fetchColumn();
-    if ($status == "occupied") 
+    $classroom_status = $stmt->fetchColumn();
+
+    if ($classroom_status == "occupied") 
         {
             return 'class="red"';
         } 
-    elseif ($status == "vacant") 
+    elseif ($classroom_status == "vacant") 
         {
         return 'class="green"';
         } 
