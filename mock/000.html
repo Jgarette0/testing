@@ -75,7 +75,159 @@
         </div>
       </div>
     </dialog>
-    <dialog id="timer-dialog" class="timer-dialog"></dialog>
+    <style>
+      .timer-dialog-handler {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+        margin: auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        row-gap: 4%;
+      }
+      .timer-dialog-top {
+        width: 100%;
+        height: 27%;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .timer-dialog-mid {
+        width: 100%;
+        height: 27%;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .name-container {
+        display: flex;
+        align-items: center;
+        border: 2px solid #676775;
+        color: #676775;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .teacher-container {
+        display: flex;
+        align-items: center;
+        border: 2px solid #676775;
+        color: #676775;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .name-text,.teacher-text {
+        background-color: #676775;
+        color: #181818;
+        width: 30%;
+        height: 80%;
+        border-radius: 6px;
+        text-align: center;
+        font-family: helvetica;
+        margin-left: 3px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: .875rem;
+      }
+       .name-value,.teacher-value{
+        font-size: 1rem;
+        font-family: helvetica;
+       }
+       .timer-dialog-bottom {
+        width: 100%;
+        height: 34%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+       .timeSelect{
+        width: 68.3%;
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: transparent;
+        font-family: helvetica;
+        font-size: 1.5rem;
+        color: #676775;
+        border:2px solid #676775;
+        margin-left: 2px;
+        outline: none;
+        cursor: pointer;
+       }
+       .timeSelect:hover{
+        opacity: .8;
+       }
+       .send{
+        width: 30%;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border: 2px solid #676775;
+        background-color: #676775;
+        cursor: pointer;
+        transition: background-color .5s;
+       }
+       .send:hover{
+        background-color: #232329;
+       }
+       .send:hover .submit-timer{
+        color: #676775;
+       }
+       .submit-timer {
+        padding: 5px;
+        margin-top: 3px;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.3s;
+        background-color: transparent;
+        color: #181818;
+        border-radius: 10px;
+        transition: transform 0.5s;
+      }
+
+      .submit-timer:hover {
+        background-color: transparent;
+        color: #676775;
+      }
+    </style>
+    <dialog id="timer-dialog" class="timer-dialog">
+      <div class="timer-dialog-handler">
+        <div class="timer-dialog-top">
+          <div class="name-container">
+            <div class="name-text"><span>NAME</span></div>
+            <div class="name-value">Jilian Garette Abangan</div>
+          </div>
+        </div>
+        <div class="timer-dialog-mid">
+          <div class="teacher-container">
+            <div class="teacher-text">
+              <span>CLASSROOM</span></div>
+              <div class="teacher-value">Computer Laboratory</div>
+            </div>
+          </div>
+          <div class="timer-dialog-bottom">
+            <select class="timeSelect">
+             <option value="60">60 minutes</option>
+             <option value="30">30 minutes</option>
+             <option value="90">1 hour and 30 minutes</option>
+           </select>
+           <button class="send">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="submit-timer"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+           </button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
     <style>
       body {
         display: flex;
@@ -156,11 +308,11 @@
       }
       .timer-dialog {
         width: 550px;
-        height: 100px;
+        height: 140px;
         border-radius: 20px;
         background-color: #181818;
         border-color: #676775;
-        transform: translateY(90px);
+        transform: translateY(105px);
       }
       input[type="tel"]::-webkit-inner-spin-button,
       input[type="tel"]::-webkit-outer-spin-button {
@@ -227,6 +379,7 @@
       const form = document.querySelector(".form");
       const submittedSvg = document.querySelector(".submits-svg");
       const closedSvg = document.querySelector(".close-svg");
+
       classroom.addEventListener("click", () => {
         dialog.showModal();
       });
