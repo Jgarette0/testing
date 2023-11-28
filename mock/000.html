@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="button">
+    <button id="classroom" class="button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -24,14 +24,65 @@
       </svg>
     </button>
 
-    <dialog id="dialog"></dialog>
-
+    <dialog id="dialog" class="dialog">
+      <div class="dialog-handler">
+        <div class="close-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="close-svg"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </div>
+        <div class="mid-content">
+          <span>Please Tap your ID for access.</span>
+        </div>
+        <div class="bottom-content">
+          <form action="" class="form">
+            <input
+              class="pin-inputs"
+              placeholder="____"
+              maxlength="4"
+              type="tel"
+            />
+            <button type="submit" class="submits">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="submits-svg"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="timer-dialog" class="timer-dialog"></dialog>
     <style>
       body {
         display: flex;
         align-items: center;
+        background-color: #232329;
       }
-      button {
+      .button {
         border: none;
         height: 100px;
         width: 100px;
@@ -42,13 +93,173 @@
         cursor: pointer;
       }
 
-      button:hover {
+      .button:hover {
         opacity: 1;
       }
 
-      button svg {
+      .button svg {
         color: #fbfbfb;
       }
+      .dialog {
+        width: 550px;
+        height: 180px;
+        border-radius: 20px;
+        background-color: #181818;
+        border-color: #676775;
+        transform: translateY(-100px);
+        overflow: hidden;
+      }
+      .dialog-handler {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+      .close-button {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 10%;
+      }
+      .mid-content {
+        height: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #676775;
+        font-family: helvetica;
+        font-size: 25px;
+        border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+      }
+      .bottom-content {
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .close-svg {
+        padding: 5px;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.3s;
+        background-color: #676775;
+        color: #181818;
+        border-radius: 10px;
+        transition: transform 2s;
+      }
+
+      .close-svg:hover {
+        background-color: transparent;
+        color: #676775;
+      }
+      .timer-dialog {
+        width: 550px;
+        height: 100px;
+        border-radius: 20px;
+        background-color: #181818;
+        border-color: #676775;
+        transform: translateY(90px);
+      }
+      input[type="tel"]::-webkit-inner-spin-button,
+      input[type="tel"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .pin-inputs {
+        all: unset;
+      }
+      .pin-inputs {
+        font-size: 1.5rem;
+        letter-spacing: 1.5rem;
+        text-align: start;
+        z-index: 3;
+        background-color: transparent;
+        color: #676775;
+        width: 160px;
+        font-family: helvetica;
+        overflow-x: hidden;
+        transform: translateY(10px) translateX(20px);
+      }
+      .submits-svg {
+        padding: 5px;
+        margin-top: 3px;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.3s;
+        background-color: #676775;
+        color: #181818;
+        border-radius: 10px;
+        transition: transform 0.5s;
+      }
+
+      .submits-svg:hover {
+        background-color: transparent;
+        color: #676775;
+      }
+      .submits:disabled {
+        background-color: transparent;
+        border: none;
+      }
+      .submits {
+        transform: translateX(-10px) translateY(13px);
+      }
+      button.submits {
+        background-color: #181818;
+        border: 1px solid #676775;
+        border-radius: 15px;
+      }
+      .submitted-svg {
+        transform: rotate(90deg);
+      }
+      .closed-svg {
+        transform: translateX(60px);
+      }
     </style>
+    <script>
+      const classroom = document.getElementById("classroom");
+      const dialog = document.getElementById("dialog");
+      const timerDialog = document.getElementById("timer-dialog");
+      const close = document.querySelector(".close-button");
+      const submits = document.querySelector(".submits");
+      const inputField = document.querySelector('input[type="tel"]');
+      const form = document.querySelector(".form");
+      const submittedSvg = document.querySelector(".submits-svg");
+      const closedSvg = document.querySelector(".close-svg");
+      classroom.addEventListener("click", () => {
+        dialog.showModal();
+      });
+      close.addEventListener("click", () => {
+        dialog.close();
+      });
+
+      submits.addEventListener("click", () => {
+        setTimeout(() => {
+          timerDialog.showModal();
+        }, 500);
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.querySelector('input[type="tel"]').value = "";
+      });
+
+      submits.disabled = true;
+
+      inputField.addEventListener("input", function (event) {
+        submits.disabled = !event.target.value.trim();
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        inputField.value = "";
+        submits.disabled = true;
+      });
+      submittedSvg.addEventListener("click", () => {
+        submittedSvg.classList.toggle("submitted-svg");
+        closedSvg.classList.toggle("closed-svg");
+      });
+    </script>
   </body>
 </html>
