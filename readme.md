@@ -1,93 +1,61 @@
-# [School Classroom Management System](https://github.com/Jgarette0/appsDev)
+# Welcome to AppsDev Project Repository
 
-## Project Structure
+This repository contains the foundation for our AppsDev project. Feel free to explore, contribute, or test the functionalities outlined below.
 
-The project is organized into the following folders:
+## Instructions to Run the Code
 
-- **database**
-  - `database-connection.php`: Handles the connection to the MySQL database.
+1. **Database Setup:**
 
-- **functions**
-  - `classroom-status.php`: Displays the status of classrooms, showing green if vacant and red if occupied.
+   - Create a database named 'appsdev'.
+   - Import the file `appsdev.sql` into the created 'appsdev' database.
 
-- **layout**
-  - `school-layout.php`: Displays the school layout like a blueprint.
-  - `school-layout.css`: Styles for the school layout.
-  - `zoom.php`: Displays the school layout with zoom functionality.
-  - `zoom.css`: Styles for the zoom layout.
-  - `zoom.js`: JavaScript for zoom functionality.
+2. **Database Connection Setup:**
 
-- **sidebar**
-  - `sidebar.php`: Displays a sidebar with the names of teachers.
-  - `sidebar.css`: Styles for the sidebar.
-  - `sidebar.js`: JavaScript for sidebar functionality.
+   - Navigate to `database-connection.php`.
+   - Locate the password field and remove 'jilian' from it.
 
-<<<<<<< HEAD
-=======
+   ```php
+   // Before
+   $password = 'jilian';
 
->>>>>>> e3275ac42ef9acebec68d0602889580054e67ace
-- **mock**
-  - Contains practice and mock micro-interactions and systems for development.
+   // After
+   $password = '';
+   ```
 
-![UI Screenshot](images/screenshot.png)
+## Folder Structure
 
-## Usage
+### `database`
 
-1. Ensure a PHP server is set up.
-2. Import the database using the SQL file provided in the `database` folder.
-3. Configure the database connection in `database/database-connection.php`.
-4. Open the application in a web browser.
+- `database-connection.php`: File handling the database connection.
+- `appsdev.sql`: Database script for the project.
 
-## Features
+### `functions`
 
-- **Classroom Status:** `classroom-status.php` dynamically displays the status of classrooms.
-- **School Layout:** `school-layout.php` and `zoom.php` provide visual representations of the school layout.
-- **Sidebar:** `sidebar.php` displays a sidebar with teacher names.
+- `classroom-status.php`: Displays the current status of classrooms.
 
-## Contributing
+### `layout`
 
-<<<<<<< HEAD
-Feel free to contribute to the project by submitting issues or pull requests.
+- `school-layout.php`: Renders the school layout resembling a blueprint.
+- `school-layout.css`: Styles for the school layout.
+- `zoom.php`: Displays the school layout with zoom functionality.
+- `zoom.css`: Styles for the zoom layout.
+- `zoom.js`: JavaScript for zoom functionality.
 
-1. **Fork the repository:** [Fork](https://github.com/Jgarette0/appsDev/fork) the repository to your GitHub account.
+### `sidebar`
 
-=======
+- `sidebar.php`: Displays a sidebar with teachers' names.
+- `sidebar.css`: Styles for the sidebar.
+- `sidebar.js`: JavaScript for sidebar functionality.
 
-Consider contributing our project, To get started, follow these steps:
+### `validation`
 
+- `validation.php`, `validation.css`, `validation.js`: Files handling form validation and modals.
+- `timer.js`: JavaScript file for timer functionality.
 
-1. **Fork the repository:** [Fork](https://github.com/Jgarette0/appsDev/fork) the repository to your GitHub account.
+## Contribution
 
+Feel free to suggest enhancements, report issues, or directly contribute to the project by forking and creating pull requests.
 
-2. **Clone your fork:** Clone the repository from your account to your local machine.
+Let's collaborate and innovate together!
 
-    ```bash
-    git clone https://github.com/YourGitHubUsername/appsDev.git
-    ```
-
-3. **Create a new branch:** Create a new branch for your contributions.
-
-    ```bash
-    git checkout -b your-branch-name
-    ```
-
-4. **Make your changes:** Make the necessary changes, add new features, or fix bugs.
-
-5. **Commit your changes:** Commit your changes with a descriptive commit message.
-
-    ```bash
-    git add .
-    git commit -m "Your descriptive commit message"
-    ```
-
-6. **Push your changes:** Push your changes to your fork on GitHub.
-
-    ```bash
-    git push origin your-branch-name
-    ```
-
-7. **Open a pull request:** Open a pull request on [GitHub](https://github.com/Jgarette0/appsDev/pulls) to propose your changes for review and inclusion in the main project.
-
-Feel free to explore the code, fix bugs, add new features, or improve documentation. Your contributions are highly valued!
-
->>>>>>> e3275ac42ef9acebec68d0602889580054e67ace
+Happy coding!
