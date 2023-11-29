@@ -23,6 +23,7 @@
  <script src="sidebar/sidebar.js"></script>
  <script src="layout/zoom.js"></script>
  <script src="validation/validation.js"></script>
+ <script src="validation/timer.js"></script>
 </body>
 
 </html>
