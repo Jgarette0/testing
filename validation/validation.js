@@ -7,6 +7,7 @@ const inputField = document.querySelector('input[type="tel"]');
 const form = document.querySelector(".form");
 const submittedSvg = document.querySelector(".submits-svg");
 const closedSvg = document.querySelector(".close-svg");
+const send = document.querySelector(".send");
 
 classrooms.forEach((classroom) => {
   classroom.addEventListener("click", () => {
@@ -44,4 +45,9 @@ form.addEventListener("submit", function (event) {
 submittedSvg.addEventListener("click", () => {
   submittedSvg.classList.toggle("submitted-svg");
   closedSvg.classList.toggle("closed-svg");
+});
+
+send.addEventListener("click", () => {
+  dialog.close();
+  timerDialog.close();
 });

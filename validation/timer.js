@@ -1,39 +1,90 @@
-const startButtons = document.querySelectorAll(".send");
-const stopButtons = document.querySelectorAll(".stopCountdown");
-const timerDisplays = document.querySelectorAll(".timer");
-const countdownDivs = document.querySelectorAll(".countdown");
-const timeSelects = document.querySelectorAll(".timeSelect");
+// <!-- Other HTML content remains unchanged -->
+// <!--
+// <button class="classroom" id="classroom1" data-status="1">Classroom 1</button>
+// <button class="classroom" id="classroom2" data-status="2">Classroom 2</button>
+// <button class="classroom" id="classroom3" data-status="3">Classroom 3</button>
+// <button class="classroom" id="classroom4" data-status="4">Classroom 4</button>
 
-const startCountdown = (index) => {
-  let selectedTime = parseInt(timeSelects[index].value);
-  countdownDivs[index].style.display = "block";
+// <select id="timeSelect">
+//  <option value="60">60 seconds</option>
+//  <option value="30">30 seconds</option>
+// </select>
 
-  const stopButton = stopButtons[index];
-  stopButton.style.display = "block";
+// <button id="startButton">Start Countdown</button> -->
+var timers = {};
+var selectedClassroom = null;
 
-  const countdownInterval = setInterval(function () {
+document.querySelectorAll(".green").forEach(function (button) {
+  button.addEventListener("click", function () {
+    selectedClassroom = this.getAttribute("data-status");
+  });
+});
+
+document.getElementById("startButton").addEventListener("click", function () {
+  if (selectedClassroom !== null) {
+    var selectedTime = parseInt(document.getElementById("timeSelect").value);
+    startCountdown(selectedClassroom, selectedTime);
+    selectedClassroom = null; // Reset selected classroom after starting countdown
+  }
+});
+
+function startCountdown(classroomStatus, selectedTime) {
+  clearInterval(timers[classroomStatus]); // Clear previous timer if any
+  updateDisplayTime(classroomStatus, selectedTime);
+  timers[classroomStatus] = setInterval(function () {
     selectedTime--;
-    timerDisplays[index].innerText = selectedTime + " minutes";
+    updateDisplayTime(classroomStatus, selectedTime);
 
     if (selectedTime <= 0) {
-      clearInterval(countdownInterval);
-      countdownDivs[index].style.backgroundColor = "red";
-      timerDisplays[index].innerHTML = "";
-      stopButton.style.display = "none";
+      clearInterval(timers[classroomStatus]);
+      hideCountdown(classroomStatus);
+      changeButtonColor(classroomStatus);
     }
   }, 1000);
-};
+}
 
-startButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    startCountdown(index);
-  });
-});
+function updateDisplayTime(classroomStatus, time) {
+  var classroomButton = document.getElementById(`classroom${classroomStatus}`);
+  var currentText = classroomButton.innerText;
+  var classroomName = currentText.split("(")[0].trim(); // Extracting the classroom name
+  classroomButton.innerText = `${classroomName} (${formatTime(time)})`;
+}
 
-stopButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const index = [...stopButtons].indexOf(this);
-    countdownDivs[index].style.display = "none";
-    clearInterval(countdownInterval);
-  });
-});
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
+}
+
+function hideCountdown(classroomStatus) {
+  var classroomButton = document.getElementById(`classroom${classroomStatus}`);
+  var currentText = classroomButton.innerText;
+  var classroomName = currentText.split("(")[0].trim(); // Extracting the classroom name
+  classroomButton.innerText = classroomName; // Resetting to the original classroom name
+}
+
+function changeButtonColor(classroomStatus) {
+  var classroomButton = document.getElementById(`classroom${classroomStatus}`);
+  classroomButton.style.backgroundColor = "#2b8a3e";
+}
+
+function startCountdown(classroomStatus, selectedTime) {
+  clearInterval(timers[classroomStatus]); // Clear previous timer if any
+  updateDisplayTime(classroomStatus, selectedTime);
+  changeButtonColor(classroomStatus, "#c92a2a"); // Change color to red when countdown starts
+  timers[classroomStatus] = setInterval(function () {
+    selectedTime--;
+    updateDisplayTime(classroomStatus, selectedTime);
+
+    if (selectedTime <= 0) {
+      clearInterval(timers[classroomStatus]);
+      hideCountdown(classroomStatus);
+      changeButtonColor(classroomStatus, "#2b8a3e"); // Change color to green when countdown ends
+    }
+  }, 1000);
+}
+
+function changeButtonColor(classroomStatus, color) {
+  var classroomButton = document.getElementById(`classroom${classroomStatus}`);
+  classroomButton.style.backgroundColor = color;
+}

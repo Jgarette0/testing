@@ -114,10 +114,10 @@ button.submits {
   border-radius: 15px;
 }
 .submitted-svg {
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
 }
 .closed-svg {
-  transform: translateX(60px);
+  /* transform: translateX(60px); */
 }
 .timer-dialog-handler {
   display: flex;
