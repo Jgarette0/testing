@@ -11,20 +11,20 @@
    <span>Please Tap your ID for access.</span>
   </div>
   <div class="bottom-content">
+
+
    <form action="" class="form">
-    <input class="pin-inputs" placeholder="____" maxlength="4" type="tel" />
-    <button type="submit" class="submits">
-     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="submits-svg">
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
-     </svg>
-    </button>
+    <?php include 'arduino/UIDContainer.php'?>
+    <input type="text" name="outputField" value="<?php echo htmlspecialchars($output); ?>"
+     placeholder="Enter value here">
+    <button id="show" class="submits">Open Modal</button>
    </form>
+
+
   </div>
  </div>
 </dialog>
-<dialog id="timer-dialog" class="timer-dialog">
+<dialog id=" timer-dialog" class="timer-dialog">
  <div class="timer-dialog-handler">
   <div class="timer-dialog-top">
    <div class="name-container">
@@ -57,3 +57,6 @@
  </div>
  </div>
 </dialog>
+
+
+<script src="validation.js"></script>

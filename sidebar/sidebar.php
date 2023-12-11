@@ -1,66 +1,67 @@
+<!-- Controls the functionality of the sidebar toggle icon -->
+<!-- This section manages the behavior of the icon responsible for toggling the visibility of the sidebar. -->
+<div class="icon">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="svg">
+  <path d="m9 18 6-6-6-6" />
+ </svg>
+</div>
 
- <div class="icon">
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="svg"><path d="m9 18 6-6-6-6"/>
-  </svg>
+<div class="aside">
+ <div class="topAside">
  </div>
-
- <div class="aside">
-  <div class="topAside">
-  </div>
-  <div class="border"></div>
-  <div class="asideContains">
-
-  <div class="teacherDetail">
-   <div class="teacherName">
-   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="nameSvg"><path d="m9 18 6-6-6-6"/>
-  </svg>
-    <div>Jilian Garette Abangan</div>
-   </div>
-   <div class="teacherInfo" id="">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="classroomSvg lucide-corner-down-right"><polyline points="15 10 20 15 15 20"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/>
-    </svg>
-    <div>Computer Laboratory</div>
-    <div class="class-timer">59:20</div>
-   </div>
-   </div>
-
-   <div class="teacherDetail">
-   <div class="teacherName">
-   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="nameSvg"><path d="m9 18 6-6-6-6"/>
-  </svg>
-    <div>Jonathan Libumfossil</div>
-   </div>
-   <div class="teacherInfo" id="">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="classroomSvg lucide-corner-down-right"><polyline points="15 10 20 15 15 20"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/>
-    </svg>
-    <div>Lecture Room</div>
-    <div class="class-timer">14:12</div>
-   </div>
-   </div>
-
-   <div class="teacherDetail">
-   <div class="teacherName">
-   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="name"><path d="m9 18 6-6-6-6"/>
-  </svg>
-    <div>Marcus Aurelius</div>
-   </div>
-   <div class="teacherInfo" id="one">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="classroomSvg lucide-corner-down-right"><polyline points="15 10 20 15 15 20"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/>
-    </svg>
-    <div>Lecture Room</div>
-    <div class="class-timer">14:12</div>
-   </div>
-   </div>
+ <div class="border"></div>
+ <div class="asideContains">
 
 
-   <div class="teacherDetail">
-   <div class="teacherName"></div>
-   <div class="teacherInfo"></div>
-   </div>
-   
+  <?php
 
-  </div>
-  <div class="border"></div>
-  <div class="bottomAside"></div>
+$host = 'localhost';
+$dbname = 'appsdev';
+$dbusername = 'root';
+$dbpassword = 'jilian';
+
+try{
+$pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+  die("Connection failed: ".$e->getMessage());
+}
+
+
+
+$query = "SELECT * FROM classrooms;";
+
+
+
+try {
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($results as $row) {
+        echo '<div class="teacherDetail">';
+        echo '<div class="teacherName">';
+        echo '<div>' . htmlspecialchars($row["classroom_name"]) . '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
+} catch (PDOException $e) {
+    // Handle any database errors
+    echo "Error: " . $e->getMessage();
+}
+
+$pdo = null;
+$stmt = null;
+?>
+
+
+  <!-- echo '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="nameSvg">
+<path d="m9 18 6-6-6-6" />
+</svg>'; -->
+
  </div>
-
+ <div class="border"></div>
+ <div class="bottomAside"></div>
+</div>

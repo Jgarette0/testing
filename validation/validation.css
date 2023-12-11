@@ -248,3 +248,9 @@ button.submits {
   background-color: transparent;
   color: #676775;
 }
+
+.idOutput {
+  color: #676775;
+  font-family: helvetica;
+  font-size: 25px;
+}

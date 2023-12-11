@@ -8,6 +8,8 @@ const form = document.querySelector(".form");
 const submittedSvg = document.querySelector(".submits-svg");
 const closedSvg = document.querySelector(".close-svg");
 const send = document.querySelector(".send");
+const show = document.getElementById("show");
+const dialog2 = document.querySelector(".timer-dialog");
 
 classrooms.forEach((classroom) => {
   classroom.addEventListener("click", () => {
@@ -21,7 +23,7 @@ close.addEventListener("click", () => {
 
 submits.addEventListener("click", () => {
   setTimeout(() => {
-    timerDialog.showModal();
+    dialog2.showModal();
   }, 500);
 });
 
@@ -30,24 +32,10 @@ form.addEventListener("submit", function (event) {
   document.querySelector('input[type="tel"]').value = "";
 });
 
-submits.disabled = true;
-
-inputField.addEventListener("input", function (event) {
-  submits.disabled = !event.target.value.trim();
-});
-
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  inputField.value = "";
-  submits.disabled = true;
-});
-
-submittedSvg.addEventListener("click", () => {
-  submittedSvg.classList.toggle("submitted-svg");
-  closedSvg.classList.toggle("closed-svg");
-});
-
 send.addEventListener("click", () => {
   dialog.close();
-  timerDialog.close();
+  dialog2.close();
+});
+show.addEventListener("click", () => {
+  dialog2.showModal();
 });
