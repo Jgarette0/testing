@@ -10,8 +10,8 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 #define ON_Board_LED 2
 
-const char* ssid = "Jilian"; //WIFI NAME OR HOTSPOT
-const char* password = ""; //WIFI PASSWORD POR MOBILE HOTSPOT PASSWORD
+const char* ssid = "Jilian"; 
+const char* password = "12345678"; //WIFI PASSWORD POR MOBILE HOTSPOT PASSWORD
 
 
 
@@ -62,23 +62,23 @@ void loop() {
 
     if (readsuccess) {
         digitalWrite(ON_Board_LED, LOW);
-
-        WiFiClient client;
         HTTPClient http;
 
         String UIDresultSend, postData;
         UIDresultSend = StrUID;
 
-        postData = "UIDresult=" + UIDresultSend;
+        postData = "UIDresult=" + UIDresultSend; // Corrected syntax for POST data
+        int httpResponseCode = http.POST(postData);
 
-     
-          http.begin(client, "http://192.168.43.215/appsdev/arduino/getUID.php"); 
-          http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+        WiFiClient client;
+        http.begin(client, "http://192.168.0.0/arduino/getUID.php");
+        http.addHeader("Content-Type", "application/x-www-form-urlencoded");
 
         int httpCode = http.POST(postData);
         String payload = http.getString();
-
         Serial.println("HTTP Code: " + String(httpCode));
+
+
         Serial.println(UIDresultSend);
         Serial.println(httpCode);
         Serial.println(payload);
@@ -88,7 +88,6 @@ void loop() {
         digitalWrite(ON_Board_LED, HIGH);
     }
 }
-
 
 int getid() {
     if (!mfrc522.PICC_IsNewCardPresent()) {
