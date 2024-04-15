@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="myDIV" class="header">
+      <h2 style="margin: 5px">My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Title..." />
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL"></ul>
+
+    <script>
+      // Retrieve saved data from localStorage if exists
+      const savedItems = localStorage.getItem("todoItems");
+      const myUL = document.getElementById("myUL");
+
+      // If there are saved items, display them
+      if (savedItems) {
+        myUL.innerHTML = savedItems;
+        addDeleteFunctionality(); // Add delete functionality for existing items
+      }
+
+      // Function to update localStorage with current list items
+      function updateLocalStorage() {
+        localStorage.setItem("todoItems", myUL.innerHTML);
+      }
+
+      // Function to add delete functionality to list items
+      function addDeleteFunctionality() {
+        const close = document.getElementsByClassName("close");
+        for (let i = 0; i < close.length; i++) {
+          close[i].onclick = function () {
+            const div = this.parentElement;
+            div.style.display = "none";
+            updateLocalStorage(); // Update localStorage after deletion
+          };
+        }
+      }
+
+      // Create a new list item when clicking on the "Add" button
+      function newElement() {
+        const li = document.createElement("li");
+        const inputValue = document.getElementById("myInput").value;
+        const t = document.createTextNode(inputValue);
+        li.appendChild(t);
+
+        if (inputValue === "") {
+          alert("You must write something!");
+        } else {
+          document.getElementById("myUL").appendChild(li);
+          updateLocalStorage();
+          addDeleteFunctionality(); // Add delete functionality for the new item
+        }
+        document.getElementById("myInput").value = "";
+
+        // Add a "close" button to the new list item
+        const span = document.createElement("SPAN");
+        const txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        // Add functionality to the "close" button
+        addDeleteFunctionality();
+      }
+
+      // Add a "checked" symbol when clicking on a list item
+      const list = document.querySelector("ul");
+      list.addEventListener(
+        "click",
+        function (ev) {
+          if (ev.target.tagName === "LI") {
+            ev.target.classList.toggle("checked");
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

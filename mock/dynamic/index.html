@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Live Update Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <!-- Content will be displayed here -->
+    </div>
+
+    <script>
+      // Function to fetch updated content
+      function fetchContent() {
+        $.ajax({
+          url: "getContent.php",
+          type: "GET",
+          success: function (response) {
+            $("#content").html(response);
+          },
+        });
+      }
+
+      // Check for content changes every 2 seconds
+      setInterval(fetchContent, 2000);
+    </script>
+  </body>
+</html>
