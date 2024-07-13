@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 ### Version 3.0
 
-=======
->>>>>>> source/main
 # [VFRS - Real-Time Vacant Room Finder System](https://github.com/Jgarette0/appsDev)
 
 Click the title to go to the [code repository files](https://github.com/Jgarette0/appsDev) for this project.
