@@ -5,7 +5,7 @@
 
 Click the title to go to the [code repository files](https://github.com/Jgarette0/appsDev) for this project.
 
-# Welcome to AppsDev Project Repository
+# Welcome to the Project's Repository
 
 This repository contains the foundation for our AppsDev project. Feel free to explore, contribute, or test the functionalities outlined below.
 
